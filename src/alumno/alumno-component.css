@@ -1,0 +1,13 @@
+.Alumno h1{
+  color:#ff0000;
+}
+.Alumno p{
+  color:green;
+}
+.Alumno span{
+  font-size: 25px;
+  color: peru;
+}
+.Alumno img{
+  width: 150px;
+}
