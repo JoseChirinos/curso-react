@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 
+import {
+  NavLink
+} from 'react-router-dom';
+
 class Menu extends Component{
   render(){
     return(
@@ -12,13 +16,19 @@ class Menu extends Component{
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <a className="nav-link" href="#">Home<span className="sr-only">(current)</span></a>
+              <NavLink to="/" className="nav-link">
+                Home
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Encontrar</a>
+              <NavLink to="/buscar" className="nav-link">
+                Buscar
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Registrar</a>
+              <NavLink to="perfil" className="nav-link">
+                Perfil
+              </NavLink>
             </li>
           </ul>
         </div>

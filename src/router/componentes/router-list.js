@@ -5,17 +5,25 @@ import {
   Switch
 } from 'react-router-dom';
 
-const Home = ()=>(
-  <div>Estas en el Home</div>
-);
+import Loadable from 'react-loadable';
+/* Este componente es el loading */
+import Loader from '../../loader/loader';
+
+/* Llamando al componente Home */
+const Home = Loadable({
+  loader: ()=> import('../../home/contenedor/home'), 
+  loading: Loader
+})
 const Buscar = ()=>(
   <div>Estas en Buscar</div>
 );
-const Perfil = ()=>(
-  <div>
-    <h1>Mi Perfil</h1>
-  </div>
-);
+
+/* Llamando al componente Perfil */
+const Perfil = Loadable({
+  loader: ()=> import('../../perfil/contenedor/perfil'),
+  loading: Loader
+});
+
 const notFound = ()=>(
   <div>404</div>
 )
@@ -25,7 +33,7 @@ const RouterList = (props) => (
     <div>
       { props.children }
       <Switch>
-        <Route path="/" component={ Home } />
+        <Route exact path="/" component={ Home } />
         <Route path="/buscar" component={ Buscar } />
         <Route path="/perfil" component={ Perfil } />
         <Route component={ notFound } />

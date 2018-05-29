@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Truncate from 'react-truncate';
+
 class Card extends Component{
 
   render(){
@@ -12,10 +14,21 @@ class Card extends Component{
             margin: "20px 0px"
           }
         }>
-        <img className="card-img-top" src="/assets/images/perrito.jpg" alt="Perrito Chapita en adopción"/>
+        <img className="card-img-top" 
+          src={`/assets/images/${this.props.picture}`} 
+          alt={ this.props.title }
+        />
         <div className="card-body">
-          <h5 className="card-title">Perrito Chapita en Adopción</h5>
-          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 className="card-title">{ this.props.title }</h5>
+          <h3>Edad: { this.props.edad }</h3>
+          <Truncate
+            lines={ 3 }
+          >
+            <p className="card-text">
+              { this.props.description }
+            </p>
+          </Truncate>
+
           <a href="#" className="btn btn-primary">Ver más</a>
         </div>
       </div>
