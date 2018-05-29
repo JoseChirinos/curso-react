@@ -1,0 +1,17 @@
+.btn-facebook{
+  background: #395185!important;
+  padding: 6px;
+}
+.Login svg,
+.Login span{
+  vertical-align: middle;
+}
+.Login svg{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+}
+.Login span{
+  padding-left: 25px;
+  color: #FFFFFF;
+}

@@ -10,9 +10,10 @@ const PerfilContenido = (props)=>(
     <div className="row justify-content-center">
       <div className="col-md-6 col-xs-12">
         {
-          mascotas.map( (mascota)=>{
+          mascotas.map( (mascota, index)=>{
             return (
-              <Card 
+              <Card
+                key = { index }
                 title= { mascota.title}
                 description = { mascota.description }
                 picture = { mascota.picture }

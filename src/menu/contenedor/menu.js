@@ -26,10 +26,27 @@ class Menu extends Component{
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="perfil" className="nav-link">
+              <NavLink to="/perfil" className="nav-link">
                 Perfil
               </NavLink>
             </li>
+
+            <li className="nav-item">
+              {
+                this.props.user == null
+                ?
+                <NavLink to="/login" className="nav-link">
+                  Ingresar
+                </NavLink>
+                :
+                <NavLink to="/logout" className="nav-link">
+                  Salir
+                </NavLink>
+              }
+
+              
+            </li>
+
           </ul>
         </div>
       </nav>

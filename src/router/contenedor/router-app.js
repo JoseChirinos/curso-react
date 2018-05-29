@@ -5,7 +5,10 @@ import RouterList from '../componentes/router-list';
 class RouterApp extends Component{
   render(){
     return(
-      <RouterList>
+      <RouterList 
+        auth={ this.props.auth }
+        handleLogin = { this.props.handleLogin }
+      >
         { this.props.children }
       </RouterList>
     );
