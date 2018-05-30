@@ -14,9 +14,11 @@ const Home = Loadable({
   loader: ()=> import('../../home/contenedor/home'), 
   loading: Loader
 })
-const Buscar = ()=>(
-  <div>Estas en Buscar</div>
-);
+/* llmando al component buscar */
+const Buscar = Loadable({
+  loader: ()=> import('../../buscar/contenedor/buscar'),
+  loading: Loader
+});
 
 /* Llamando al componente Perfil */
 const Perfil = Loadable({

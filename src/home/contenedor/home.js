@@ -6,22 +6,21 @@ class Home extends Component{
   render(){
     return(
       <div className="Home">
-        <div className="container">
-          <div className="row justify-content-center">
+          
+          <div className="card-columns text-center">
 
             {
-              mascotas.map( (mascota)=>{
+              mascotas.map( (mascota, index)=>{
                 return (
-                  <div className="col-md-4 col-xs-12">
                     <Card
+                      key = { index }
                       {...mascota}
                     />
-                  </div>
                 )
               })
             }
           </div>
-        </div>        
+
       </div>
     )
   }

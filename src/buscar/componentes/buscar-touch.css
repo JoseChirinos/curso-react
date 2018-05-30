@@ -1,0 +1,14 @@
+.Card-touch{
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+}
+.Card-touch > .card .btn{
+  display: none;
+}
+.Card-touch > .card .card-text{
+  display: none;
+}
+.animated{
+  transition: all 0.5s ease-in-out;
+}
